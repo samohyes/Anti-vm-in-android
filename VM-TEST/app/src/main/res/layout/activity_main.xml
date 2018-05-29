@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QEMU PROP"
+        android:id="@+id/qemuprop"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Device id"
+        android:id="@+id/deviceid"
+        android:layout_toRightOf="@+id/qemuprop"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="qemu pipe"
+        android:id="@+id/qemupipe"
+        android:layout_toRightOf="@+id/deviceid"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="df Number"
+        android:layout_below="@+id/qemuprop"
+        android:id="@+id/defaultnumber"/>
+    <Button
+        android:id="@+id/IMSI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/defaultnumber"
+        android:layout_alignBaseline="@+id/defaultnumber"
+        android:text="IMSI" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Build"
+        android:id="@+id/build"
+        android:layout_alignBaseline="@+id/IMSI"
+        android:layout_toRightOf="@+id/IMSI"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Operator"
+        android:id="@+id/operator"
+        android:layout_below="@+id/defaultnumber"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QuDriver"
+        android:id="@+id/qudriver"
+        android:layout_alignBaseline="@+id/operator"
+        android:layout_toRightOf="@+id/operator"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QuFile"
+        android:id="@+id/qufile"
+        android:layout_alignBaseline="@+id/qudriver"
+        android:layout_toRightOf="@+id/qudriver"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gyfile"
+        android:layout_below="@+id/qudriver"
+        android:id="@+id/gyfile"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monkey"
+        android:id="@+id/Monkey"
+        android:layout_toRightOf="@+id/gyfile"
+        android:layout_alignBaseline="@+id/gyfile"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="debugger"
+        android:id="@+id/debugger"
+        android:layout_alignBaseline="@+id/Monkey"
+        android:layout_toRightOf="@+id/Monkey"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ptrace"
+        android:layout_below="@+id/gyfile"
+        android:id="@+id/ptrace"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="eth0"
+        android:layout_toRightOf="@+id/ptrace"
+        android:layout_alignBaseline="@+id/ptrace"
+        android:id="@+id/eth0"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMC"
+        android:id="@+id/SMC"
+        android:layout_toRightOf="@+id/eth0"
+        android:layout_alignBaseline="@+id/eth0"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="taintdroid"
+        android:id="@+id/taintdroid"
+        android:layout_below="@+id/ptrace"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sensor"
+        android:layout_toRightOf="@+id/taintdroid"
+        android:layout_alignBaseline="@+id/taintdroid"
+        android:id="@+id/sensor"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="qemu_task"
+        android:id="@+id/qemu_task"
+        android:layout_alignBaseline="@+id/sensor"
+        android:layout_toRightOf="@+id/sensor"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bkpt"
+        android:id="@+id/bkpt"
+        android:layout_alignBaseline="@+id/SMC"
+        android:layout_toRightOf="@+id/SMC"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detect:"
+        android:layout_below="@+id/taintdroid"
+        android:id="@+id/show"/>
+
+</RelativeLayout>
