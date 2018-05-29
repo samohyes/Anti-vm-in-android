@@ -55,8 +55,12 @@ Key points for testing this apk: use an arm based image emulator otherwise you c
 *17.qemu tasks
    In qemu, the processor has to finish the current task before start the other one. So here the thread two can't get the globale variable when it querys. It has to wait for the thread one to finish that arm assembly block code.
 
+   For my apk, if it prints 5000 in the string, it means the global variable is a constant and it is in the emulator. Otherwise, it is in the real device.
+   
 *18.SMC detection
    Arm is actually based on harvard architecture. Whihc means, if we get a function address and put function 1 and function 2 on that address rotationally we may execute function 1 and function 2 randomly. While in emulators, it just execute what function we put there right before we call it.
 
+   For my apk, if it prints out "#SMC1#" and "#SMC2#" one by one, it should be in emulator. If this two strings are random, it's in the real device.
+   
 *19.break point detection
-   For qemu, it actually locked or quit abnormally when we call "bkpt".   
+   For qemu, it actually locked or quit abnormally when we call "bkpt". 
