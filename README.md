@@ -1,6 +1,8 @@
 # Anti-vm-in-android
 
-# This is an apk for detecting virtual machine. Most of these techniques can be bypassed by changing the android framework and kernel.
+This is an apk for detecting virtual machine. Most of these techniques can be bypassed by changing the android framework and kernel.
+
+Key points for testing this apk: use an arm based image emulator otherwise you can't compile those jni code with arm assembly int it.
 
 *1.qemu properties
    Simply checking those properties in qemu.
